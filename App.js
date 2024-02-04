@@ -2,8 +2,6 @@ import { StatusBar } from 'expo-status-bar';
 import {useFonts} from 'expo-font'
 import { SafeAreaView , StyleSheet, Text, View , Image} from 'react-native';
 
-const statusBarHeight = StatusBar.currentHeight || 0;
-
 const App = () => {
   
   return (
@@ -33,7 +31,6 @@ const style = StyleSheet.create({
   safeArea: {
     flex: 1,
     backgroundColor: 'black',
-    paddingTop: statusBarHeight
   },
   txtHeader:{
     color:'#f5f6fa',
