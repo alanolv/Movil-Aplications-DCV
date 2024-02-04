@@ -1,5 +1,15 @@
 {
   "expo": {
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Inter-Black.ttf"
+          ]
+        }
+      ]
+    ],
     "name": "ExpoCV",
     "slug": "ExpoCV",
     "version": "1.0.0",
