@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { SafeAreaView , StyleSheet, Text, View , Image} from 'react-native';
-
+import { SafeAreaView , StyleSheet, Text, View , Image, ScrollView} from 'react-native';
+import { AntDesign, MaterialCommunityIcons, FontAwesome6} from '@expo/vector-icons';
 const App = () => {
   
   return (
@@ -20,28 +20,46 @@ const App = () => {
       </View>
       <View style={style.bd}>
         <View style={style.bdLeft}>
-          <View>
+          <View style={style.bdContact}>
             <Text style={style.bdTitle}>CONTACTO</Text>
-            <Text style={style.bdLine}>────</Text>
+            <Text style={style.bdLine}>────</Text>    
+            <Text style={style.bdTxt}><FontAwesome6 name="square-whatsapp" size={24} color="black" />   4421446031</Text>
+            <Text style={style.bdTxt}><MaterialCommunityIcons name="gmail" size={24} color="black" />  alan.c@gmail.com</Text>
+            <Text style={style.bdTxt}><AntDesign name="github" size={24} color="black" />  github.com/alanolv</Text>
           </View>
-          <View>
+          <View style={style.bdAbility}>
             <Text style={style.bdTitle}>HABILIDADES</Text>
             <Text style={style.bdLine}>────</Text>
+            <Text style={style.bdTxt}>• Comunicacion acertiva</Text>
+            <Text style={style.bdTxt}>• Resolucion de problemas</Text>
+            <Text style={style.bdTxt}>• Trabajo en equipo</Text>
+            <Text style={style.bdTxt}>• Proactivo</Text>
           </View>
-          <View>
+          <View style={style.bdEdu}>
             <Text style={style.bdTitle}>EDUCACIÓN</Text>
             <Text style={style.bdLine}>────</Text>
+            <Text style={[style.bdTxt,{fontWeight:'bold'}]}>• Ingenieria de software</Text>
+            <Text style={[style.bdTxt,{fontSize:12}]}>Universidad Autonoma de Queretaro</Text>
+            <Text style={[style.bdTxt,{fontWeight:'bold',marginTop:10}]}>• Tecnico en programación</Text>
+            <Text style={[style.bdTxt,{fontSize:12}]}>Centro de bachilleres tecnico y de servicios</Text>
           </View>
+          <View style={style.bdEmpt}></View>
         </View>
         <View style={style.bdRight}>
-          <View>
+          <View style={style.bdAbout}>
             <Text style={style.bdTitle}>ACERCA DE MI</Text>
             <Text style={style.bdLine}>────</Text>
+            <Text style={style.bdTxt}>Mi nombre es Alan Olvera Cristino, soy un estudiante mexicano de ingeniería de software, actualmente desarrollo proyectos privados y personales.</Text>
           </View>
-          <View>
-            <Text style={style.bdTitle}>EXPERIENCIA LABORAL</Text>
+          <View style={style.bdExp}>
+            <Text style={[style.bdTitle,{marginTop:10}]}>EXPERIENCIA</Text>
             <Text style={style.bdLine}>────</Text>
-          </View>
+            <Text style={[style.bdTxt,{fontWeight:'bold'}]}>• Hackathon 2022</Text>
+            <Text style={[style.bdTxt,{fontSize:12}]}>Desarrollo de una aplicacion web entorno a la tematica de LegalTech con el nombre Virizion</Text>
+            <Text style={[style.bdTxt,{fontWeight:'bold',marginTop:10}]}>• Hackathon 2021</Text>
+            <Text style={[style.bdTxt,{fontSize:12}]}>Desarrollo de una aplicacion web y movil entorno a la educacion con el nombre Aprinder</Text>
+            </View>
+            <View style={style.bdEmpt}></View>
         </View>
       </View>
     </SafeAreaView>
@@ -106,6 +124,29 @@ const style = StyleSheet.create({
 
     fontWeight: 'bold',
     color:'#291295',
+  },
+  bdContact:{
+    flex:2.5,
+    
+  },
+  bdTxt:{
+    textAlignVertical:'center',
+    fontSize:14
+  },
+  bdAbility:{
+    flex:2.5
+  },
+  bdEdu:{
+    flex:2.5
+  },
+  bdEmpt:{
+    flex:3
+  },
+  bdAbout:{
+    flex:1.3
+  },
+  bdExp:{
+    flex:1.5
   }
   
 });
